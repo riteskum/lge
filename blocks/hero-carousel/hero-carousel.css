@@ -1,0 +1,196 @@
+/* Hero Carousel - full-width hero with background image, gradient overlay, and carousel indicators */
+
+.hero-carousel-container .hero-carousel-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-carousel {
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+@media (width >= 900px) {
+  .hero-carousel {
+    min-height: 870px;
+  }
+}
+
+/* Slides */
+.hero-carousel-slide {
+  display: none;
+  position: relative;
+  min-height: inherit;
+}
+
+.hero-carousel-slide.active {
+  display: flex;
+  align-items: center;
+}
+
+/* Background image cell */
+.hero-carousel-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-carousel-image picture,
+.hero-carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+/* Gradient overlay */
+.hero-carousel-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgb(255 255 255 / 80%) 30%, transparent 70%);
+  z-index: 1;
+}
+
+/* Content cell */
+.hero-carousel-content {
+  position: relative;
+  z-index: 2;
+  max-width: 768px;
+  padding: 60px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+@media (width >= 900px) {
+  .hero-carousel-content {
+    padding: 80px 32px;
+    max-width: 900px;
+    margin: 0 auto 0 32px;
+  }
+}
+
+/* Eyebrow badge */
+.hero-carousel-content p:first-child {
+  display: inline-block;
+  font-family: Inter, var(--body-font-family);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #7a0024;
+  padding: 6px 14px;
+  border-radius: 4px;
+  margin: 0 0 24px;
+  align-self: flex-start;
+}
+
+/* Heading */
+.hero-carousel-content h1 {
+  font-family: Manrope, var(--heading-font-family);
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1.8px;
+  color: #1b1c1c;
+  margin: 0 0 24px;
+}
+
+@media (width >= 900px) {
+  .hero-carousel-content h1 {
+    font-size: 96px;
+    letter-spacing: -3.6px;
+    line-height: 96px;
+  }
+}
+
+/* Description */
+.hero-carousel-content p:not(:first-child, .button-container) {
+  font-family: Inter, var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #5a4042;
+  margin: 0 0 32px;
+  max-width: 576px;
+}
+
+@media (width >= 900px) {
+  .hero-carousel-content p:not(:first-child, .button-container) {
+    font-size: 20px;
+    line-height: 32.5px;
+  }
+}
+
+/* Button container */
+.hero-carousel-content .button-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+/* Primary CTA */
+.hero-carousel-content a.button {
+  font-family: Inter, var(--body-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 32px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #7a0024, #a50034);
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgb(122 0 36 / 30%);
+}
+
+.hero-carousel-content a.button:hover {
+  background: linear-gradient(to right, #a50034, #c7003f);
+}
+
+/* Secondary CTA - second button container */
+.hero-carousel-content .button-container + .button-container a.button {
+  background: #e4e2e2;
+  color: #1b1c1c;
+  box-shadow: none;
+}
+
+.hero-carousel-content .button-container + .button-container a.button:hover {
+  background: #d0cece;
+}
+
+/* Carousel indicators */
+.hero-carousel-indicators {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 3;
+}
+
+.hero-carousel-indicator {
+  width: 48px;
+  height: 4px;
+  border: none;
+  border-radius: 2px;
+  background: rgb(0 0 0 / 20%);
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-carousel-indicator.active {
+  background: #7a0024;
+}
+
+.hero-carousel-indicator:hover {
+  background: rgb(0 0 0 / 40%);
+}

@@ -1,0 +1,145 @@
+/* smart-home block */
+.smart-home {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.smart-home > div {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* image cell */
+.smart-home-image {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.smart-home-image::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 200px;
+  height: 200px;
+  background: #7a0024;
+  filter: blur(60px);
+  opacity: 0.3;
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.smart-home-image picture {
+  display: block;
+}
+
+.smart-home-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+}
+
+/* content cell */
+.smart-home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.smart-home-content h2 {
+  font-family: Manrope, sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #1b1c1c;
+  line-height: 1.2;
+  margin: 0 0 32px;
+}
+
+/* features list */
+.smart-home-features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.smart-home-feature {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* icon */
+.smart-home-feature-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e9e8e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.smart-home-feature-icon picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smart-home-feature-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* feature text */
+.smart-home-feature-text h4,
+.smart-home-feature-text h3 {
+  font-family: Manrope, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1b1c1c;
+  margin: 0 0 4px;
+  line-height: 1.4;
+}
+
+.smart-home-feature-text p {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: #5a4042;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* desktop: two-column layout */
+@media (width >= 900px) {
+  .smart-home > div {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .smart-home-image {
+    flex: 1;
+  }
+
+  .smart-home-content {
+    flex: 1;
+  }
+
+  .smart-home-content h2 {
+    font-size: 48px;
+  }
+}

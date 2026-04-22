@@ -1,0 +1,126 @@
+.promo-cards {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.promo-cards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.promo-cards-header h2 {
+  font-family: Manrope, sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #1b1c1c;
+  margin: 0;
+}
+
+.promo-cards-header p {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  color: #5a4042;
+  margin: 4px 0 0;
+}
+
+.promo-cards-header-link {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #7a0024;
+  text-decoration: none;
+}
+
+.promo-cards-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.promo-card {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  min-height: 420px;
+}
+
+.promo-card-image {
+  position: absolute;
+  inset: 0;
+}
+
+.promo-card-image picture,
+.promo-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.promo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(0 0 0 / 50%) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.promo-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px;
+  z-index: 1;
+}
+
+.promo-card-content h3 {
+  font-family: Manrope, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 8px;
+}
+
+.promo-card-content p {
+  font-family: Inter, sans-serif;
+  color: #fff;
+  margin: 0 0 16px;
+}
+
+.promo-card-large .promo-card-content h3 {
+  font-size: 36px;
+}
+
+.promo-card-large .promo-card-content p {
+  font-size: 18px;
+}
+
+.promo-card-small .promo-card-content h3 {
+  font-size: 30px;
+}
+
+.promo-card-small .promo-card-content p {
+  font-size: 16px;
+}
+
+.promo-card-link {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (width <= 768px) {
+  .promo-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-cards-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
