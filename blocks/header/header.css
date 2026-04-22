@@ -190,6 +190,7 @@ header nav .nav-sections ul > li > ul {
   margin-top: 0;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 header nav .nav-sections ul > li > ul > li {
   font-weight: 400;
 }
