@@ -182,17 +182,16 @@ header nav .nav-sections ul > li {
   color: #57534e;
 }
 
-header nav .nav-sections ul > li:first-child {
-  color: #7a0024;
-}
-
 header nav .nav-sections ul > li > ul {
   margin-top: 0;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 header nav .nav-sections ul > li > ul > li {
   font-weight: 400;
+}
+
+header nav .nav-sections .default-content-wrapper > ul > li:first-child {
+  color: #7a0024;
 }
 
 @media (width >= 900px) {
