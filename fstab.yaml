@@ -1,0 +1,5 @@
+mountpoints:
+  /:
+    url: "https://author-p142275-e2042045.adobeaemcloud.com/bin/franklin.delivery/riteskum/lge/main"
+    type: "markup"
+    suffix: ".html"

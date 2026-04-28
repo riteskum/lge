@@ -1,0 +1,8 @@
+{
+  "mappings": [
+    "/content/lge/:/"
+  ],
+  "includes": [
+    "/content/lge/"
+  ]
+}

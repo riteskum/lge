@@ -1,0 +1,79 @@
+[
+  {
+    "id": "main",
+    "components": [
+      "section"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "hero-carousel",
+      "category-hero",
+      "promo-cards",
+      "featured-products",
+      "product-listing",
+      "smart-home",
+      "help-links",
+      "cards",
+      "columns",
+      "fragment"
+    ]
+  },
+  {
+    "id": "hero-carousel",
+    "components": [
+      "hero-carousel-slide"
+    ]
+  },
+  {
+    "id": "promo-cards",
+    "components": [
+      "promo-card"
+    ]
+  },
+  {
+    "id": "featured-products",
+    "components": [
+      "product-card"
+    ]
+  },
+  {
+    "id": "product-listing",
+    "components": [
+      "product-listing-item"
+    ]
+  },
+  {
+    "id": "help-links",
+    "components": [
+      "help-link"
+    ]
+  },
+  {
+    "id": "cards",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  }
+]
